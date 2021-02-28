@@ -1,10 +1,26 @@
 
 exports.min = function min (array) {
-  return 0;
+  let newArr = [];
+  if (!(array instanceof Array)) {
+    return 0;
+  } else if (array.length == 0) {
+    return 0;
+  } else {
+    newArr = array.sort(function(a, b){return a - b});
+    return newArr[0];
+  }
 }
 
 exports.max = function max (array) {
-  return 0;
+  let newArr = [];
+  if (!(array instanceof Array)) {
+    return 0;
+  } else if (array.length == 0) {
+    return 0;
+  } else {
+    newArr = array.sort(function(a, b){return b - a});
+    return newArr[0];
+  }
 }
 
 exports.avg = function avg (array) {
@@ -46,3 +62,8 @@ exports.avg = function avg (array) {
 // console.log(arrLength, sum, avg)
 // console.log(typeof(array))
 // }
+
+// let arr = [1, 5, 3, 0],
+//     newArr = [];
+// newArr = arr.sort(function(a, b){return a - b});
+// console.log(newArr)
